@@ -13,6 +13,12 @@ Plato::~Plato() {
 Plato::Plato(vector<Ingredientes*> pcant_ingr, string presena, int pcant_sbr, string pregistro, 
 int pprecio, double ppromedio) {
     vector<Ingredientes*> cant_ingre = pcant_ingr;
+	cant_ingre = pcant_ingr;
+	resena = presena;
+	cant_sabor = pcant_sbr;
+	registro = pregistro;
+	precio = pprecio;
+	promedio = ppromedio;
 }
 
 //getter

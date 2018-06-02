@@ -2,16 +2,21 @@
 #include "Bodega.h"
 #include "Plato.h"
 #include "Ingredientes.h"
+#include <vector>
 
 using namespace std;
+using std::cout;
 
 int main() {
 	int opcion;
 	string nombre = "";
 	string tipo = "";
 	int cant_aport = 0, duracion = 0;
-	Ingredientes* ingre;
 	do{
+	Ingredientes* ingre;
+	vector<Ingredientes> ingres;
+	
+		
 		cout<<"Bienvenido al Menu de Opciones"<<endl;
 		cout<<"1.- Agregar Ingrediente"<<endl;
 		cout<<"2.- Agregar Platos"<<endl;
@@ -31,9 +36,13 @@ int main() {
 				cin>> duracion;
 
 				ingre = new Ingredientes(nombre, tipo, cant_aport, duracion);
-
+				ingres.push_back(*ingre);
 				break;
 			case 2:
+				cout << ingres.size() << endl;
+				for(int i = 0; i < ingres.size(); i++){
+					cout<<".."<<ingres[i].getNombre()<<endl;
+				}
 				
 				break;
 			case 3:
